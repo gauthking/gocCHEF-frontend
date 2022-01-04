@@ -1,0 +1,127 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+
+:root {
+  --navbar-height: 59px;
+  --hero-colour: rgb(69, 122, 44);
+  --h-primary: rgb(24, 20, 20);
+  --other-text: rgb(218, 199, 199);
+  --navbar-main-color: rgb(20, 18, 18);
+  --navbar-item-color: rgb(224, 219, 219);
+  --hover-color: rgba(221, 221, 134, 0.575);
+}
+
+/* Utility Classes */
+.h-primary {
+  font-size: 2.5rem;
+  padding: 12px;
+}
+
+/* NavBar */
+.navbar {
+  display: flex;
+  position: relative;
+}
+
+.navbar::before {
+  content: "";
+  background-color: var(--navbar-main-color);
+  position: absolute;
+  height: 110%;
+  width: 100%;
+  z-index: -1;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  font-size: 1rem;
+}
+
+.navbar ul li a {
+  /* to give padding/margin change the display to block for the inline anchor tags */
+  display: block;
+  text-decoration: none;
+  padding: 8px 17px;
+  margin: 11px 25px;
+  color: var(--navbar-item-color);
+  font-family: "JetBrains Mono", monospace;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.navbar ul li a:hover {
+  transform: scale(1.15);
+  background-color: var(--hover-color);
+  border-radius: 4px;
+}
+
+/* Hero */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+/* use pseudo selector to add background -->TIP */
+#home::before {
+  content: "";
+  background-color: var(--hero-colour);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+#home h1 {
+  margin: 45px 12px;
+  background-color: rgba(143, 196, 130, 0.5);
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+#home h1 {
+  color: var(--h-primary);
+  text-align: center;
+}
+
+#home p {
+  color: var(--other-text);
+  
+  font-weight: 100;
+  text-align: center;
+  font-size: 44px;
+}
+
+.btn {
+  margin: 60px;
+}
+
+.btn a {
+  display: block;
+  padding: 3px 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(24, 20, 20);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out 0.05s;
+  background-color: rgb(143, 196, 130);
+}
+
+.btn a:hover {
+  transform: scale(1.5);
+  background-color: var(--hover-color);
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+}
