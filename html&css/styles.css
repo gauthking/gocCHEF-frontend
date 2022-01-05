@@ -4,22 +4,42 @@
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(178, 214, 50);
+}
+
 /* Variables */
 
 :root {
   --navbar-height: 59px;
   --hero-colour: rgb(69, 122, 44);
+  --services-color: rgb(20, 18, 18);
   --h-primary: rgb(24, 20, 20);
+  --h-secondary: rgb(194, 183, 183);
   --other-text: rgb(218, 199, 199);
   --navbar-main-color: rgb(20, 18, 18);
   --navbar-item-color: rgb(224, 219, 219);
   --hover-color: rgba(221, 221, 134, 0.575);
+
 }
 
 /* Utility Classes */
 .h-primary {
   font-size: 2.5rem;
   padding: 12px;
+}
+
+.h-secondary{
+  font-size: 2.2rem;
+  padding: 7px;
 }
 
 /* NavBar */
@@ -32,7 +52,7 @@
   content: "";
   background-color: var(--navbar-main-color);
   position: absolute;
-  height: 110%;
+  height: 100%;
   width: 100%;
   z-index: -1;
 }
@@ -52,7 +72,7 @@
   display: block;
   text-decoration: none;
   padding: 8px 17px;
-  margin: 11px 25px;
+  margin: 21px 25px;
   color: var(--navbar-item-color);
   font-family: "JetBrains Mono", monospace;
   transition: all 0.4s ease-in-out 0s;
@@ -65,16 +85,17 @@
 }
 
 /* Hero */
-#home {
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 600px;
+  position: relative;
 }
 
 /* use pseudo selector to add background -->TIP */
-#home::before {
+.hero::before {
   content: "";
   background-color: var(--hero-colour);
   position: absolute;
@@ -83,24 +104,21 @@
   z-index: -2;
 }
 
-#home h1 {
-  margin: 45px 12px;
+.hero h1 {
+  margin: 15px 12px;
   background-color: rgba(143, 196, 130, 0.5);
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
-}
-
-#home h1 {
+  text-shadow: 2px 2px 3px #beb49c;
   color: var(--h-primary);
-  text-align: center;
 }
 
-#home p {
+.hero p {
   color: var(--other-text);
-  
   font-weight: 100;
   text-align: center;
   font-size: 44px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .btn {
@@ -124,4 +142,48 @@
   background-color: var(--hover-color);
   border-radius: 4px;
   color: rgb(0, 0, 0);
+}
+/* Services */
+ .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  position: relative;
+} 
+
+.services::before {
+  content: "";
+  background-color: var(--services-color);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+}
+
+.services h1{
+  position: absolute;
+  top: 50px;
+  background-color: rgba(143, 196, 130, 0.5);
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  color: var(--h-secondary);
+}
+
+.servicesbox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+.box p{
+  text-align: center;
 }
