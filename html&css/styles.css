@@ -8,13 +8,17 @@ body::-webkit-scrollbar {
   width: 8px;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
   background-color: black;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: rgb(178, 214, 50);
 }
+
+/* html,body{
+  overflow-x: hidden;
+} */
 
 /* Variables */
 
@@ -28,7 +32,7 @@ body::-webkit-scrollbar-thumb{
   --navbar-main-color: rgb(20, 18, 18);
   --navbar-item-color: rgb(224, 219, 219);
   --hover-color: rgba(221, 221, 134, 0.575);
-
+  --services-box-color: rgba(143, 196, 130, 0.274);
 }
 
 /* Utility Classes */
@@ -37,7 +41,7 @@ body::-webkit-scrollbar-thumb{
   padding: 12px;
 }
 
-.h-secondary{
+.h-secondary {
   font-size: 2.2rem;
   padding: 7px;
 }
@@ -46,6 +50,7 @@ body::-webkit-scrollbar-thumb{
 .navbar {
   display: flex;
   position: relative;
+  overflow-x: hidden;
 }
 
 .navbar::before {
@@ -90,8 +95,9 @@ body::-webkit-scrollbar-thumb{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 650px;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* use pseudo selector to add background -->TIP */
@@ -105,12 +111,23 @@ body::-webkit-scrollbar-thumb{
 }
 
 .hero h1 {
-  margin: 15px 12px;
+  margin: 47px 12px;
   background-color: rgba(143, 196, 130, 0.5);
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
   text-shadow: 2px 2px 3px #beb49c;
   color: var(--h-primary);
+  padding: 12px;
+  animation: logofx 1s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes logofx{
+  from{
+    box-shadow: -7px 7px 2px #ffffff46 ;
+  }
+  to{
+    box-shadow: 6px -6px 2px #ffffff6e ;
+  }
 }
 
 .hero p {
@@ -118,7 +135,7 @@ body::-webkit-scrollbar-thumb{
   font-weight: 100;
   text-align: center;
   font-size: 44px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .btn {
@@ -144,14 +161,21 @@ body::-webkit-scrollbar-thumb{
   color: rgb(0, 0, 0);
 }
 /* Services */
- .services {
+.services {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100vh;
   position: relative;
-} 
+  overflow-x: hidden;
+}
+
+@media (max-width: 1674px) {
+  .services {
+    height: 1500px;
+  }
+}
 
 .services::before {
   content: "";
@@ -162,28 +186,65 @@ body::-webkit-scrollbar-thumb{
   z-index: -3;
 }
 
-.services h1{
+.services h1 {
   position: absolute;
   top: 50px;
   background-color: rgba(143, 196, 130, 0.5);
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
   color: var(--h-secondary);
+  padding: 10px;
+  margin: 5px;
 }
 
-.servicesbox{
+.servicesbox {
   display: flex;
   flex-wrap: wrap;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30px;
 }
 
-.box{
+@media (max-width: 1280px) {
+  .servicesbox {
+    margin: 20px 90px;
+  }
+}
+
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 6px 122px;
   width: 300px;
+  height: 380px;
+  border: 6px solid rgba(143, 196, 130, 0.774);
+  border-radius: 10px;
+  background-color: var(--services-box-color);
+  transition: all 0.4s ease-in-out 0s;
 }
 
-.box p{
+.box:hover{
+  transform: scale(1.12);
+  box-shadow: -7px 7px 2px #ffffff8f ;
+}
+
+@media (max-width:321px) {
+  .box{
+    width: 241px;
+  }
+}
+.box p {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(231, 231, 231, 0.589);
+  padding: 3px 6px;
+}
+
+.box h3 {
+  font-family: "Nunito", sans-serif;
+  color: white;
 }
