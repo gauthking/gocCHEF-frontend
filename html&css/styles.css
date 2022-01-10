@@ -28,7 +28,6 @@ body::-webkit-scrollbar-thumb {
   --services-color: rgb(20, 18, 18);
   --h-primary: rgb(24, 20, 20);
   --h-secondary: rgb(194, 183, 183);
-  --other-text: rgb(218, 199, 199);
   --navbar-main-color: rgb(20, 18, 18);
   --navbar-item-color: rgb(224, 219, 219);
   --hover-color: rgba(221, 221, 134, 0.575);
@@ -39,6 +38,12 @@ body::-webkit-scrollbar-thumb {
 .h-primary {
   font-size: 2.5rem;
   padding: 12px;
+}
+
+.para {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: rgba(231, 231, 231, 0.644);
 }
 
 .h-secondary {
@@ -79,7 +84,8 @@ body::-webkit-scrollbar-thumb {
   padding: 8px 17px;
   margin: 21px 25px;
   color: var(--navbar-item-color);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Roboto", sans-serif;
+  color: rgba(231, 231, 231, 0.795);
   transition: all 0.4s ease-in-out 0s;
 }
 
@@ -121,21 +127,20 @@ body::-webkit-scrollbar-thumb {
   animation: logofx 1s ease-in-out 0.5s infinite alternate;
 }
 
-@keyframes logofx{
-  from{
-    box-shadow: -7px 7px 2px #ffffff46 ;
+@keyframes logofx {
+  from {
+    box-shadow: -7px 7px 2px #ffffff46;
   }
-  to{
-    box-shadow: 6px -6px 2px #ffffff6e ;
+  to {
+    box-shadow: 6px -6px 2px #ffffff49;
   }
 }
 
 .hero p {
-  color: var(--other-text);
   font-weight: 100;
   text-align: center;
   font-size: 44px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .btn {
@@ -161,23 +166,24 @@ body::-webkit-scrollbar-thumb {
   color: rgb(0, 0, 0);
 }
 /* Services */
-.services {
+#services {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 710px;
   position: relative;
   overflow-x: hidden;
 }
 
+
 @media (max-width: 1674px) {
-  .services {
+  #services {
     height: 1500px;
   }
 }
 
-.services::before {
+#services::before {
   content: "";
   background-color: var(--services-color);
   position: absolute;
@@ -186,7 +192,7 @@ body::-webkit-scrollbar-thumb {
   z-index: -3;
 }
 
-.services h1 {
+#services h1 {
   position: absolute;
   top: 50px;
   background-color: rgba(143, 196, 130, 0.5);
@@ -195,6 +201,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--h-secondary);
   padding: 10px;
   margin: 5px;
+  animation: logofx 1s ease-in-out 0.5s infinite alternate;
 }
 
 .servicesbox {
@@ -227,24 +234,37 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.4s ease-in-out 0s;
 }
 
-.box:hover{
+.box:hover {
   transform: scale(1.12);
-  box-shadow: -7px 7px 2px #ffffff8f ;
+  box-shadow: -7px 7px 2px #ffffff8f;
 }
 
-@media (max-width:321px) {
-  .box{
+@media (max-width: 321px) {
+  .box {
     width: 241px;
   }
 }
 .box p {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: rgba(231, 231, 231, 0.589);
   padding: 3px 6px;
+  cursor: default;
 }
 
 .box h3 {
   font-family: "Nunito", sans-serif;
-  color: white;
+  color: rgba(255, 255, 255, 0.877);
+  cursor: default;
+}
+
+/* Copyright */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: var(--navbar-main-color);
+}
+
+footer div {
+  color: rgba(255, 255, 255, 0.623);
 }
