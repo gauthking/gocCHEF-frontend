@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-@media (max-width: 1422px) {
+@media (max-width: 1350px) {
   #services {
     height: 1500px;
   }
@@ -211,7 +211,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 80px;
+  bottom: 60px;
 }
 
 @media (max-width:1036px) {
@@ -226,7 +226,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 6px 122px;
+  margin: 6px 95px;
   width: 250px;
   height: 380px;
   border: 6px solid rgba(143, 196, 130, 0.774);
@@ -235,15 +235,23 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.4s ease-in-out 0s;
 }
 
-@media (min-width: 1128px) {
+@media (min-width:909px) and (max-width: 1380px) {
   .box {
-    margin: 6px 100px;
+    margin: 25px 80px;
   }
 }
+
 
 .box:hover {
   transform: scale(1.12);
   box-shadow: -7px 7px 2px #ffffff8f;
+}
+
+@media (max-width: 1349px) {
+  .box:hover {
+    transform: none;
+    box-shadow: none;
+  }  
 }
 
 @media (max-width: 321px) {
