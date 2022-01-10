@@ -171,13 +171,13 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 710px;
+  height: 900px;
   position: relative;
   overflow-x: hidden;
 }
 
 
-@media (max-width: 1674px) {
+@media (max-width: 1422px) {
   #services {
     height: 1500px;
   }
@@ -211,12 +211,13 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 30px;
+  bottom: 80px;
 }
 
-@media (max-width: 1280px) {
-  .servicesbox {
-    margin: 20px 90px;
+@media (max-width:1036px) {
+  .servicesbox{
+    position: relative;
+    bottom: 0px;
   }
 }
 
@@ -226,12 +227,18 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   flex-direction: column;
   margin: 6px 122px;
-  width: 300px;
+  width: 250px;
   height: 380px;
   border: 6px solid rgba(143, 196, 130, 0.774);
   border-radius: 10px;
   background-color: var(--services-box-color);
   transition: all 0.4s ease-in-out 0s;
+}
+
+@media (min-width: 1128px) {
+  .box {
+    margin: 6px 100px;
+  }
 }
 
 .box:hover {
@@ -244,6 +251,7 @@ body::-webkit-scrollbar-thumb {
     width: 241px;
   }
 }
+
 .box p {
   padding: 3px 6px;
   cursor: default;
