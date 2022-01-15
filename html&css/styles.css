@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--navbar-item-color);
   font-family: "Roboto", sans-serif;
   color: rgba(231, 231, 231, 0.795);
-  transition: all 0.4s ease-in-out 0s;
+  transition: all 0.37s ease-in-out 0s;
 }
 
 .navbar ul li a:hover {
@@ -155,7 +155,7 @@ body::-webkit-scrollbar-thumb {
   color: rgb(24, 20, 20);
   font-family: "JetBrains Mono", monospace;
   font-size: 20px;
-  transition: all 0.5s ease-in-out 0.05s;
+  transition: all 0.37s ease-in-out 0.05s;
   background-color: rgb(143, 196, 130);
 }
 
@@ -298,9 +298,15 @@ footer div {
 
 @media (max-width: 1350px) {
   #partners-section {
-    height: 1500px;
+    height: 1090px;
   }
 }
+
+ @media (max-width: 830px) {
+   #partners-section{
+     height: 1900px;
+   }
+ } 
 
 
 #partners-section::before {
