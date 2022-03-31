@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -14,6 +18,10 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: rgb(178, 214, 50);
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 /* html,body{
@@ -93,6 +101,43 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1.15);
   background-color: var(--hover-color);
   border-radius: 4px;
+}
+
+/* hamburger menu */
+@media (min-width: 700px) {
+  .navbar i {
+    display: none;
+  }
+}
+
+@media (max-width : 699px){
+  .normalmenu li{
+    display: none;
+  }
+
+  .navbar i {
+    display: block;
+    color: white;
+    padding: 30px;    
+    top: 30px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .hamburgermenu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    list-style: none;
+    gap: 0.4rem;
+  }
+
+  .hamburgermenu li a {
+    text-decoration: none;
+    color: blanchedalmond;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+  }
 }
 
 /* Hero */
